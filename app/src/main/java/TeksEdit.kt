@@ -86,7 +86,7 @@ fun FormDataDiri(modifier: Modifier)
         label = { Text(text = "Alamat Lengkap") },
 
         onValueChange = {
-            textNama = it
+            textAlamat = it
         }
     )
 
