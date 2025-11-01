@@ -173,7 +173,22 @@ fun FormPendaftaran (modifier: Modifier){
 
             Spacer(modifier = Modifier.height(8.dp))
 
+            Button(
+                modifier = Modifier.fillMaxWidth(1f)
+                    .padding(start = 10.dp, end = 10.dp),
+                // the button is enabled when the user makes a selection
+                enabled = textAlamat.isNotEmpty(),
 
+                onClick = {
+                    nama = textNama
+                    jenis = textJK
+                    alamat = textAlamat
+                    status = textStatus
+                }
+
+            ){
+                Text(stringResource(R.string.submit))
+            }
         }
     }
 }
