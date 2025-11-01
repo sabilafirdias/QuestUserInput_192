@@ -1,6 +1,7 @@
 package com.example.prak5
 
 import FormDataDiri
+import FormPendaftaran
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -21,7 +22,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             Prak5Theme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    FormDataDiri(
+                    FormPendaftaran(
                         modifier = Modifier.padding(innerPadding)
                     )
                 }
