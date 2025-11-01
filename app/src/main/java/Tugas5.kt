@@ -36,5 +36,10 @@ import com.example.prak5.R
 
 @Composable
 fun FormPendaftaran (modifier: Modifier){
+    var textNama by remember { mutableStateOf("") }
+    var textAlamat by remember { mutableStateOf("") }
+    var textJK by remember { mutableStateOf("") }
+    var textStatus by remember { mutableStateOf("") }
+
 
 }
