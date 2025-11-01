@@ -49,5 +49,6 @@ fun FormPendaftaran (modifier: Modifier){
     val gender:List<String> = listOf("Laki-laki", "Perempuan")
     val kawin:List<String> = listOf("Single", "Taken", "HTS")
 
-
+    Column(
+    ){}
 }
