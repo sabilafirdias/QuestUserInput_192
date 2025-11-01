@@ -76,8 +76,28 @@ fun FormPendaftaran (modifier: Modifier){
             modifier = Modifier
                 .fillMaxWidth()
                 .height(600.dp)
-                .padding(all = 12.dp)){
+                .padding(all = 12.dp)) {
 
+            Text(
+                text = "NAMA LENGKAP",
+                fontSize = 20.sp,
+                fontWeight = FontWeight.SemiBold,
+                modifier = Modifier
+                    .padding(top = 9.dp, start = 9.dp)
+            )
 
-    }
+            OutlinedTextField(
+                value = textNama,
+                singleLine = true,
+                shape = MaterialTheme.shapes.large,
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(start = 12.dp, end = 12.dp),
+                label = { Text(text = "Isian nama lengkap") },
+                onValueChange = {
+                    textNama = it
+                }
+            )
+
+        }}
 }
