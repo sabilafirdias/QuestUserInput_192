@@ -59,7 +59,14 @@ fun FormPendaftaran (modifier: Modifier){
                 .height(120.dp)
                 .padding(top = 30.dp)
                 .background(colorResource(id = R.color.hijautua))){
-
+                Text(
+                    text = "Formulir Pendaftaran",
+                    fontSize = 29.sp,
+                    color = Color.White,
+                    fontWeight = FontWeight.SemiBold,
+                    modifier = Modifier
+                        .padding (top = 40.dp, start = 9.dp)
+                )
         }
 
 }
