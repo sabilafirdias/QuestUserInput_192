@@ -76,14 +76,14 @@ fun FormPendaftaran (modifier: Modifier){
             modifier = Modifier
                 .fillMaxWidth()
                 .height(600.dp)
-                .padding(all = 12.dp)){
+                .padding(all = 12.dp)) {
 
             Text(
                 text = "NAMA LENGKAP",
                 fontSize = 20.sp,
                 fontWeight = FontWeight.SemiBold,
                 modifier = Modifier
-                    .padding (top = 9.dp, start = 9.dp)
+                    .padding(top = 9.dp, start = 9.dp)
             )
 
             OutlinedTextField(
@@ -101,5 +101,33 @@ fun FormPendaftaran (modifier: Modifier){
 
             Spacer(modifier = Modifier.height(8.dp))
 
+            Text(
+                text = "JENIS KELAMIN",
+                fontSize = 20.sp,
+                fontWeight = FontWeight.SemiBold,
+                modifier = Modifier
+                    .padding(top = 9.dp, start = 9.dp)
+            )
 
+            Column {
+                gender.forEach { item ->
+                    Row(
+                        modifier = Modifier.selectable(
+                        selected = textJK == item,
+
+                        onClick = { textJK = item }
+                    ), verticalAlignment = Alignment.CenterVertically) {
+                        RadioButton(
+                            selected = textJK == item,
+
+                            onClick = {
+                                textJK = item
+                            })
+                        Text(item)
+                    }
+                }
+            }
+
+        }
+    }
 }
