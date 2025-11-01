@@ -50,5 +50,16 @@ fun FormPendaftaran (modifier: Modifier){
     val kawin:List<String> = listOf("Single", "Taken", "HTS")
 
     Column(
-    ){}
+        modifier = Modifier
+            .fillMaxWidth(),
+        horizontalAlignment = Alignment.CenterHorizontally) {
+        Box(
+            modifier = Modifier
+                .fillMaxWidth()
+                .height(120.dp)
+                .padding(top = 30.dp)
+                .background(colorResource(id = R.color.hijautua))){
+
+        }
+
 }
