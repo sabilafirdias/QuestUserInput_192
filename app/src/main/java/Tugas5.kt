@@ -76,14 +76,14 @@ fun FormPendaftaran (modifier: Modifier){
             modifier = Modifier
                 .fillMaxWidth()
                 .height(600.dp)
-                .padding(all = 12.dp)) {
+                .padding(all = 12.dp)){
 
             Text(
                 text = "NAMA LENGKAP",
                 fontSize = 20.sp,
                 fontWeight = FontWeight.SemiBold,
                 modifier = Modifier
-                    .padding(top = 9.dp, start = 9.dp)
+                    .padding (top = 9.dp, start = 9.dp)
             )
 
             OutlinedTextField(
@@ -106,13 +106,12 @@ fun FormPendaftaran (modifier: Modifier){
                 fontSize = 20.sp,
                 fontWeight = FontWeight.SemiBold,
                 modifier = Modifier
-                    .padding(top = 9.dp, start = 9.dp)
+                    .padding (top = 9.dp, start = 9.dp)
             )
 
             Column {
                 gender.forEach { item ->
-                    Row(
-                        modifier = Modifier.selectable(
+                    Row(modifier = Modifier.selectable(
                         selected = textJK == item,
 
                         onClick = { textJK = item }
@@ -133,12 +132,11 @@ fun FormPendaftaran (modifier: Modifier){
                 fontSize = 20.sp,
                 fontWeight = FontWeight.SemiBold,
                 modifier = Modifier
-                    .padding(top = 9.dp, start = 9.dp)
+                    .padding (top = 9.dp, start = 9.dp)
             )
             Column {
                 kawin.forEach { item ->
-                    Row(
-                        modifier = Modifier.selectable(
+                    Row(modifier = Modifier.selectable(
                         selected = textStatus == item,
                         onClick = { textStatus = item }
                     ), verticalAlignment = Alignment.CenterVertically) {
@@ -152,6 +150,26 @@ fun FormPendaftaran (modifier: Modifier){
                 }
             }
 
-        }
-    }
+            Text(
+                text = "ALAMAT",
+                fontSize = 20.sp,
+                fontWeight = FontWeight.SemiBold,
+                modifier = Modifier
+                    .padding (top = 9.dp, start = 9.dp)
+            )
+
+            OutlinedTextField(
+                value = textAlamat,
+                singleLine = true,
+                shape = MaterialTheme.shapes.large,
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(start = 12.dp, end = 12.dp),
+                label = { Text(text = "Alamat") },
+                onValueChange = {
+                    textAlamat = it
+                }
+            )
+
+
 }
