@@ -41,5 +41,13 @@ fun FormPendaftaran (modifier: Modifier){
     var textJK by remember { mutableStateOf("") }
     var textStatus by remember { mutableStateOf("") }
 
+    var nama by remember {mutableStateOf("")}
+    var alamat by remember {mutableStateOf("")}
+    var jenis by remember {mutableStateOf("")}
+    var status by remember {mutableStateOf("")}
+
+    val gender:List<String> = listOf("Laki-laki", "Perempuan")
+    val kawin:List<String> = listOf("Single", "Taken", "HTS")
+
 
 }
