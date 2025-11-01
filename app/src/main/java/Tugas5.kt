@@ -171,5 +171,9 @@ fun FormPendaftaran (modifier: Modifier){
                 }
             )
 
+            Spacer(modifier = Modifier.height(8.dp))
 
+
+        }
+    }
 }
