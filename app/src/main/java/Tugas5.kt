@@ -68,5 +68,16 @@ fun FormPendaftaran (modifier: Modifier){
                         .padding (top = 40.dp, start = 9.dp)
                 )
         }
+        Spacer(modifier = Modifier.height(16.dp))
 
+        ElevatedCard(
+            elevation = CardDefaults.cardElevation(defaultElevation = 10.dp),
+            colors = CardDefaults.cardColors(containerColor = colorResource(id = R.color.hijaumuda)),
+            modifier = Modifier
+                .fillMaxWidth()
+                .height(600.dp)
+                .padding(all = 12.dp)){
+
+
+    }
 }
